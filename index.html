@@ -1,0 +1,288 @@
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap');
+  .bro * { box-sizing: border-box; margin: 0; padding: 0; }
+  .bro {
+    font-family: 'Inter', sans-serif;
+    background: #ffffff;
+    color: #111827;
+    width: 100%;
+    max-width: 816px;
+    border: 1px solid #E5E7EB;
+  }
+  .hero {
+    background: #ffffff;
+    padding: 52px 44px 44px;
+    border-bottom: 1px solid #E5E7EB;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-accent-bar {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 4px;
+    background: #1A6CF5;
+  }
+.hero-logo {
+  position: absolute;
+  top: 50px;
+  right: 0px;
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  z-index: 1;
+}
+  .tag {
+    display: inline-block;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.13em;
+    color: #1A6CF5;
+    background: #EEF4FF;
+    border: 1px solid #C7DCFF;
+    padding: 4px 12px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .hero-headline {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: #0F172A;
+    max-width: 400px;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-headline span { color: #1A6CF5; }
+  .hero-sub {
+    margin-top: 14px;
+    font-size: 14.5px;
+    color: #6B7280;
+    max-width: 360px;
+    line-height: 1.65;
+    position: relative;
+    z-index: 1;
+  }
+  .services {
+    background: #F8FAFC;
+    padding: 40px 44px;
+    border-bottom: 1px solid #E5E7EB;
+  }
+  .section-label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    color: #9CA3AF;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .service-card {
+    background: #ffffff;
+    border: 1px solid #E5E7EB;
+    border-radius: 4px;
+    padding: 24px 22px 20px;
+    position: relative;
+    border-top: 3px solid #E5E7EB;
+    transition: border-top-color 0.2s;
+  }
+  .service-card { border-top-color: #1A6CF5; }
+  .service-num {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 10.5px;
+    font-weight: 700;
+    color: #1A6CF5;
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+  }
+  .service-icon {
+    font-size: 20px;
+    color: #1A6CF5;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .service-name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #0F172A;
+    line-height: 1.3;
+    margin-bottom: 7px;
+  }
+  .service-desc {
+    font-size: 12px;
+    color: #6B7280;
+    line-height: 1.6;
+  }
+  .why {
+    background: #ffffff;
+    padding: 36px 44px;
+    border-bottom: 1px solid #E5E7EB;
+  }
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    margin-top: 22px;
+  }
+  .why-item {
+    padding-right: 24px;
+    border-right: 1px solid #E5E7EB;
+    padding-left: 0;
+  }
+  .why-item:last-child { border-right: none; padding-right: 0; }
+  .why-item + .why-item { padding-left: 24px; }
+  .why-dot {
+    width: 6px; height: 6px;
+    background: #1A6CF5;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  .why-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 4px;
+    line-height: 1.4;
+  }
+  .why-body {
+    font-size: 11.5px;
+    color: #9CA3AF;
+    line-height: 1.55;
+  }
+  .footer-cta {
+    background: #1A6CF5;
+    padding: 30px 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .cta-heading {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 3px;
+  }
+  .cta-sub { font-size: 13px; color: #C7DCFF; }
+  .cta-btn {
+    background: #ffffff;
+    color: #1A6CF5;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12.5px;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 2px;
+    white-space: nowrap;
+    cursor: pointer;
+    border: none;
+    letter-spacing: 0.02em;
+  }
+  .footer-bottom {
+    background: #252a7d;
+    padding: 14px 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #E5E7EB;
+  }
+  .footer-brand {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: #eeeeee;
+  }
+  .footer-contact { font-size: 11.5px; color: #eeeeee; }
+</style>
+
+<div class="bro">
+  <h2 style="position:absolute;left:-9999px">IT Consulting Services Brochure</h2>
+
+  <div class="hero">
+    <div class="hero-accent-bar"></div>
+	<img src="BITCS-LOGO.png" class="hero-logo" alt="BAGUS IT Consulting">
+    <div class="tag">PT. BAGUS ITX CONSULTING</div>
+    <div class="hero-headline">Solusi layanan IT <br>yang <span>beradaptasi</span>,<br>dengan kebutuhan fungsi bisnis anda</div>
+    <div class="hero-sub">Membangun, mengembangkan, mengamankan dan mengelola teknologi yang digunakan sehari-hari dikebutuhan organisasi anda.</div>
+  </div>
+
+  <div class="services">
+    <div class="section-label">Layanan Kami</div>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-num">MSP</div>
+        <i class="ti ti-server service-icon" aria-hidden="true"></i>
+        <div class="service-name">Pengelolaan & Helpdesk IT</div>
+        <div class="service-desc">Menjaga operasional teknologi organisasi anda tetap berjalan dengan baik. Mulai dari support helpdesk, pemeliharaan, monitoring, troubleshooting, dan konsultasi khusus.</div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-num">APPS</div>
+        <i class="ti ti-code service-icon" aria-hidden="true"></i>
+        <div class="service-name">Pengembangan Sistem &amp; Aplikasi</div>
+        <div class="service-desc">Membangun sistem yang mengikuti cara kerja bisnis Anda. Mulai dari aplikasi internal, otomatisasi workflow, hingga pengembangan dan integrasi sistem.</div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-num">PROJ</div>
+        <i class="ti ti-cloud-upload service-icon" aria-hidden="true"></i>
+        <div class="service-name">Infrastruktur &amp; Proyek IT</div>
+        <div class="service-desc">Membantu merencanakan, menyediakan, menerapkan, dan mengembangkan infrastruktur IT. Mulai dari jaringan dan server hingga implementasi proyek IT secara menyeluruh</div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-num">TUT</div>
+        <i class="ti ti-school service-icon" aria-hidden="true"></i>
+        <div class="service-name">Pelatihan &amp; Pendampingan IT</div>
+        <div class="service-desc">Pelatihan dan pendampingan praktis, disesuaikan dengan kebutuhan organisasi maupun individu.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="why">
+    <div class="section-label">Mengapa bekerja sama dengan kami</div>
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="why-dot"></div>
+        <div class="why-title">Memahami masalah<br> sebelum menawarkan solusi.</div>
+        <div class="why-body">Kami melihat kebutuhan dan kondisi bisnis terlebih dahulu sebelum menentukan teknologi yang tepat.</div>
+      </div>
+      <div class="why-item">
+        <div class="why-dot"></div>
+        <div class="why-title">Praktis, bukan sekedar kompleks</div>
+        <div class="why-body">Solusi IT yang baik tidak harus mahal, berlebihan, atau lebih rumit dari yang diperlukan.</div>
+      </div>
+      <div class="why-item">
+        <div class="why-dot"></div>
+        <div class="why-title">Flexibel dan Menyesuaikan</div>
+        <div class="why-body">Kami menyediakan solusi yang sesuai dengan kebutuhan, anggaran, dan cara kerja bisnis Anda.</div>
+      </div>
+    </div>
+  </div>
+
+ <!-- <div class="footer-cta">
+    <div>
+      <div class="cta-heading">Ready to simplify your IT?</div>
+      <div class="cta-sub">Let's talk about what you need.</div>
+    </div>
+    <button class="cta-btn" onclick="sendPrompt('Help me draft a contact section for this brochure with placeholder phone, email, and address')">Get in touch ↗</button>
+  </div>
+-->
+  <div class="footer-bottom">
+    <div class="footer-brand">www.bitcs.id</div>
+    <div class="footer-contact">bitcs-id@googlegroups.com · WA +62 8162 600 60</div>
+  </div>
+</div>
